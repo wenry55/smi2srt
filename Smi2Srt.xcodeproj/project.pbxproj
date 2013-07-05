@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19231C15178485C80056BFEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19231C14178485C80056BFEB /* Cocoa.framework */; };
+		19231C1F178485C80056BFEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19231C1D178485C80056BFEB /* InfoPlist.strings */; };
+		19231C21178485C80056BFEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19231C20178485C80056BFEB /* main.m */; };
+		19231C25178485C80056BFEB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 19231C23178485C80056BFEB /* Credits.rtf */; };
+		19231C28178485C80056BFEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19231C27178485C80056BFEB /* AppDelegate.m */; };
+		19231C2B178485C90056BFEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19231C29178485C90056BFEB /* MainMenu.xib */; };
+		19231C331784898E0056BFEB /* BkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19231C321784898E0056BFEB /* BkView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19231C11178485C80056BFEB /* Smi2Srt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smi2Srt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19231C14178485C80056BFEB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		19231C17178485C80056BFEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		19231C18178485C80056BFEB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		19231C19178485C80056BFEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		19231C1C178485C80056BFEB /* Smi2Srt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Smi2Srt-Info.plist"; sourceTree = "<group>"; };
+		19231C1E178485C80056BFEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19231C20178485C80056BFEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19231C22178485C80056BFEB /* Smi2Srt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smi2Srt-Prefix.pch"; sourceTree = "<group>"; };
+		19231C24178485C80056BFEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		19231C26178485C80056BFEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19231C27178485C80056BFEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19231C2A178485C90056BFEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		19231C311784898E0056BFEB /* BkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BkView.h; sourceTree = "<group>"; };
+		19231C321784898E0056BFEB /* BkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BkView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19231C0E178485C80056BFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19231C15178485C80056BFEB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19231C08178485C80056BFEB = {
+			isa = PBXGroup;
+			children = (
+				19231C1A178485C80056BFEB /* Smi2Srt */,
+				19231C13178485C80056BFEB /* Frameworks */,
+				19231C12178485C80056BFEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19231C12178485C80056BFEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19231C11178485C80056BFEB /* Smi2Srt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19231C13178485C80056BFEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19231C14178485C80056BFEB /* Cocoa.framework */,
+				19231C16178485C80056BFEB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19231C16178485C80056BFEB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19231C17178485C80056BFEB /* AppKit.framework */,
+				19231C18178485C80056BFEB /* CoreData.framework */,
+				19231C19178485C80056BFEB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19231C1A178485C80056BFEB /* Smi2Srt */ = {
+			isa = PBXGroup;
+			children = (
+				19231C26178485C80056BFEB /* AppDelegate.h */,
+				19231C27178485C80056BFEB /* AppDelegate.m */,
+				19231C29178485C90056BFEB /* MainMenu.xib */,
+				19231C1B178485C80056BFEB /* Supporting Files */,
+				19231C311784898E0056BFEB /* BkView.h */,
+				19231C321784898E0056BFEB /* BkView.m */,
+			);
+			path = Smi2Srt;
+			sourceTree = "<group>";
+		};
+		19231C1B178485C80056BFEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19231C1C178485C80056BFEB /* Smi2Srt-Info.plist */,
+				19231C1D178485C80056BFEB /* InfoPlist.strings */,
+				19231C20178485C80056BFEB /* main.m */,
+				19231C22178485C80056BFEB /* Smi2Srt-Prefix.pch */,
+				19231C23178485C80056BFEB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19231C10178485C80056BFEB /* Smi2Srt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19231C2E178485C90056BFEB /* Build configuration list for PBXNativeTarget "Smi2Srt" */;
+			buildPhases = (
+				19231C0D178485C80056BFEB /* Sources */,
+				19231C0E178485C80056BFEB /* Frameworks */,
+				19231C0F178485C80056BFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Smi2Srt;
+			productName = Smi2Srt;
+			productReference = 19231C11178485C80056BFEB /* Smi2Srt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19231C09178485C80056BFEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "B&J Studio";
+			};
+			buildConfigurationList = 19231C0C178485C80056BFEB /* Build configuration list for PBXProject "Smi2Srt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 19231C08178485C80056BFEB;
+			productRefGroup = 19231C12178485C80056BFEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19231C10178485C80056BFEB /* Smi2Srt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19231C0F178485C80056BFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19231C1F178485C80056BFEB /* InfoPlist.strings in Resources */,
+				19231C25178485C80056BFEB /* Credits.rtf in Resources */,
+				19231C2B178485C90056BFEB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19231C0D178485C80056BFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19231C21178485C80056BFEB /* main.m in Sources */,
+				19231C28178485C80056BFEB /* AppDelegate.m in Sources */,
+				19231C331784898E0056BFEB /* BkView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19231C1D178485C80056BFEB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19231C1E178485C80056BFEB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		19231C23178485C80056BFEB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19231C24178485C80056BFEB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		19231C29178485C90056BFEB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19231C2A178485C90056BFEB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19231C2C178485C90056BFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		19231C2D178485C90056BFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		19231C2F178485C90056BFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smi2Srt/Smi2Srt-Prefix.pch";
+				INFOPLIST_FILE = "Smi2Srt/Smi2Srt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		19231C30178485C90056BFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smi2Srt/Smi2Srt-Prefix.pch";
+				INFOPLIST_FILE = "Smi2Srt/Smi2Srt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19231C0C178485C80056BFEB /* Build configuration list for PBXProject "Smi2Srt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19231C2C178485C90056BFEB /* Debug */,
+				19231C2D178485C90056BFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19231C2E178485C90056BFEB /* Build configuration list for PBXNativeTarget "Smi2Srt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19231C2F178485C90056BFEB /* Debug */,
+				19231C30178485C90056BFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19231C09178485C80056BFEB /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Smi2Srt' target in the 'Smi2Srt' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
