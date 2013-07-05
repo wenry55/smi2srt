@@ -83,7 +83,7 @@
 		}
 		scriptStr = [componentsToKeep componentsJoinedByString:@""];
 		
-		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
+		scriptStr = [scriptStr stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\r\n"]];
 		
 		NSString *timeStr = [smiStr substringWithRange:[result rangeAtIndex:1]];
 		
