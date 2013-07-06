@@ -16,7 +16,6 @@
     if (self) {
         // Initialization code here.
 		[self registerForDraggedTypes:[NSArray arrayWithObjects:NSColorPboardType, NSFilenamesPboardType, nil]];
-		NSLog(@"initWithFrame");
     }
     
     return self;
@@ -28,7 +27,6 @@
 }
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
-	NSLog(@"dragging Entered.");
 	return NSDragOperationCopy;
 }
 
@@ -36,7 +34,6 @@
 	NSPasteboard *pboard = [sender draggingPasteboard];
 	if ([[pboard types] containsObject:NSURLPboardType]) {
 		NSURL *fileURL = [NSURL URLFromPasteboard:pboard];
-		NSLog(@"%@", fileURL);
 		[self convertSmi:fileURL];
 	}
 	return YES;
@@ -75,9 +72,7 @@
 			[componentsToKeep addObject:[comps objectAtIndex:i]];
 		}
 		scriptStr = [componentsToKeep componentsJoinedByString:@""];
-		
 		scriptStr = [scriptStr stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\r\n"]];
-		
 		NSString *timeStr = [smiStr substringWithRange:[result rangeAtIndex:1]];
 		
 		if (prevScript != nil) {
