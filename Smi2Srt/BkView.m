@@ -29,25 +29,18 @@
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
 	NSLog(@"dragging Entered.");
-	return NSDragOperationGeneric;
+	return NSDragOperationCopy;
 }
 
--(NSDragOperation) draggingUpdated:(id<NSDraggingInfo>)sender
-{
-//	NSLog(@"draggingUpdated");
-	return NSDragOperationEvery;
-}
-
-- (void)draggingEnded:(id<NSDraggingInfo>)sender {
-	NSLog(@"%@", sender);
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
 	NSPasteboard *pboard = [sender draggingPasteboard];
 	if ([[pboard types] containsObject:NSURLPboardType]) {
 		NSURL *fileURL = [NSURL URLFromPasteboard:pboard];
 		NSLog(@"%@", fileURL);
 		[self convertSmi:fileURL];
 	}
+	return YES;
 }
-
 - (void)convertSmi:(NSURL *)fileURL {
 	if (![[fileURL pathExtension] isEqualToString:@"smi"]) return;
 	NSError *error;
