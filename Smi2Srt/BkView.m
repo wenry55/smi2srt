@@ -66,7 +66,7 @@
 		NSString *scriptStr = [smiStr substringWithRange:[result rangeAtIndex:2]];
 		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"&nbsp;" withString:[NSString string]];
 		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"&#8211" withString:@"-"];
-		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
+		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"<br>" withString:@""];
 		NSArray *comps = [scriptStr componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
 		NSMutableArray *componentsToKeep = [NSMutableArray array];
 		for (int i = 0; i < [comps count]; i = i + 2) {
