@@ -74,13 +74,23 @@
 		}
 		scriptStr = [componentsToKeep componentsJoinedByString:@""];
 		scriptStr = [scriptStr stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\r\n"]];
+		
+		if ([scriptStr isEqualToString:@""]) continue;
+		
 		NSString *timeStr = [smiStr substringWithRange:[result rangeAtIndex:1]];
 		
 		if (prevScript != nil) {
 			[srtStr appendString:[NSString stringWithFormat:@"%d\r\n", seq]];
-			[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:[timeStr intValue] - 100]]];
+			int prevTime = [[prevScript objectAtIndex:0] intValue];
+			if (([timeStr intValue] - prevTime) > 7000 ) {
+				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:prevTime + 7000]]];
+			} else {
+				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:[timeStr intValue] - 100]]];
+			}
 			[srtStr appendString:[NSString stringWithFormat:@"%@\r\n\r\n", [prevScript objectAtIndex:1]]];
 		}
+		
+		
 		
 		seq++;
 		prevScript = @[timeStr, scriptStr];
