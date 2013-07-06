@@ -85,7 +85,7 @@
 			if (([timeStr intValue] - prevTime) > 7000 ) {
 				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:prevTime + 7000]]];
 			} else {
-				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:[timeStr intValue] - 100]]];
+				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:[timeStr intValue] - 10]]];
 			}
 			[srtStr appendString:[NSString stringWithFormat:@"%@\r\n\r\n", [prevScript objectAtIndex:1]]];
 		}
