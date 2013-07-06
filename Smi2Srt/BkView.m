@@ -82,8 +82,8 @@
 		if (prevScript != nil) {
 			[srtStr appendString:[NSString stringWithFormat:@"%d\r\n", seq]];
 			int prevTime = [[prevScript objectAtIndex:0] intValue];
-			if (([timeStr intValue] - prevTime) > 7000 ) {
-				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:prevTime + 7000]]];
+			if (([timeStr intValue] - prevTime) > 5000 ) {
+				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:prevTime + 5000]]];
 			} else {
 				[srtStr appendString:[NSString stringWithFormat:@"%@ --> %@\r\n", [self getSrtTime:[prevScript objectAtIndex:0]], [self getSrtTimeWithInt:[timeStr intValue] - 10]]];
 			}
