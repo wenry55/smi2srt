@@ -14,6 +14,7 @@
 		19231C28178485C80056BFEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19231C27178485C80056BFEB /* AppDelegate.m */; };
 		19231C2B178485C90056BFEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19231C29178485C90056BFEB /* MainMenu.xib */; };
 		19231C331784898E0056BFEB /* BkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19231C321784898E0056BFEB /* BkView.m */; };
+		19A46190178BAB8600F0E0FC /* BkView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A4618F178BAB8500F0E0FC /* BkView2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		19231C2A178485C90056BFEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		19231C311784898E0056BFEB /* BkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BkView.h; sourceTree = "<group>"; };
 		19231C321784898E0056BFEB /* BkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BkView.m; sourceTree = "<group>"; };
+		19A4618E178BAB8500F0E0FC /* BkView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BkView2.h; sourceTree = "<group>"; };
+		19A4618F178BAB8500F0E0FC /* BkView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BkView2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				19231C1B178485C80056BFEB /* Supporting Files */,
 				19231C311784898E0056BFEB /* BkView.h */,
 				19231C321784898E0056BFEB /* BkView.m */,
+				19A4618E178BAB8500F0E0FC /* BkView2.h */,
+				19A4618F178BAB8500F0E0FC /* BkView2.m */,
 			);
 			path = Smi2Srt;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				19231C21178485C80056BFEB /* main.m in Sources */,
 				19231C28178485C80056BFEB /* AppDelegate.m in Sources */,
 				19231C331784898E0056BFEB /* BkView.m in Sources */,
+				19A46190178BAB8600F0E0FC /* BkView2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
