@@ -60,11 +60,7 @@
 	NSArray *matchRes = [regex matchesInString:srtStr options:0 range:NSMakeRange(0, [srtStr length])];
 	
 	NSMutableString *resultStr = [NSMutableString new];
-	[resultStr appendString:@"\
-	 <SAMI>\
-	 <HEAD>\
-	 <TITLE></TITLE>\
-	 <STYLE TYPE=\"text/css\">\
+	[resultStr appendString:@"<SAMI>\n<HEAD>\n<TITLE></TITLE>\n<STYLE TYPE=\"text/css\">\
 	 <!--\
 	 P { margin-left:2pt; margin-right:2pt; margin-bottom:1pt;\
 		 margin-top:1pt; font-size:20pt; text-align:center;\
@@ -72,9 +68,7 @@
 	 }\
 	 .KRCC { Name:한국어; lang:ko-KR; SAMIType:CC; }\
 	 -->\
-	 </STYLE>\
-	 </HEAD>\
-	 <BODY>"];
+	 </STYLE>\n</HEAD>\n<BODY>\n"];
 
 	for (NSTextCheckingResult *item in matchRes) {
 		// 1:2:3:4 --> 5:6:7:8 9(str)
@@ -92,17 +86,16 @@
 		
 		NSString *scriptStr = [srtStr substringWithRange:[item rangeAtIndex:9]];
 		
-		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"-" withString:@"&#8211"];
+		// scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"-" withString:@"&#8211"];
 		scriptStr = [scriptStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
 		
-		NSString *convStr = [NSString stringWithFormat:@"<SYNC Start=%d><P Class=KRCC>%@\r\n<SYNC Start=%d><P Class=KRCC>&nbsp;\r\n",
+		NSString *convStr = [NSString stringWithFormat:@"<SYNC Start=%d><P Class=KRCC>%@\n<SYNC Start=%d><P Class=KRCC>&nbsp;\n",
 							 fromOffset, scriptStr, toOffset];
 		
-		NSLog(@"%@", convStr);
-		[resultStr appendFormat:@"%@\r\n", convStr];
+		[resultStr appendString:convStr];
 	}
 	
-	[resultStr appendString:@"</BODY></SAMI>"];
+	[resultStr appendString:@"</BODY>\r\n</SAMI>"];
 	
 	NSURL *smiUrl = [[fileURL URLByDeletingPathExtension] URLByAppendingPathExtension:@"smi"];
 	[resultStr writeToURL:smiUrl atomically:YES encoding:NSUTF8StringEncoding error:nil];
